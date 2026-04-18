@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How it works — Aletheia</title>
+  <meta name="description" content="Three rules. ID verification, ten curated matches a day, and a video call before messaging. Here's how Aletheia works.">
+  <link rel="canonical" href="https://aletheia.app/how-it-works">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="cursor-halo" aria-hidden="true"></div>
+
+<!-- NAV -->
+<header>
+  <nav class="nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-wordmark" aria-label="Aletheia home">Aletheia</a>
+      <ul class="nav-links" role="list">
+        <li><a href="how-it-works.html" class="nav-link" aria-current="page">How it works</a></li>
+        <li><a href="trust.html"        class="nav-link">Trust &amp; safety</a></li>
+        <li><a href="press.html"        class="nav-link">Press</a></li>
+      </ul>
+      <div class="nav-right">
+        <a href="waitlist.html" class="btn btn-navy" style="padding:10px 20px;font-size:14px;">Request invite</a>
+        <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-mobile-overlay">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div id="nav-mobile-overlay" class="nav-mobile-overlay" role="dialog" aria-label="Navigation menu">
+    <ul role="list" style="list-style:none;display:flex;flex-direction:column;gap:28px;align-items:center;">
+      <li><a href="how-it-works.html" class="nav-link" style="font-size:28px;font-weight:600;font-family:'Geist',Inter,sans-serif;color:var(--navy)">How it works</a></li>
+      <li><a href="trust.html"        class="nav-link" style="font-size:28px;font-weight:600;font-family:'Geist',Inter,sans-serif;color:var(--navy)">Trust &amp; safety</a></li>
+      <li><a href="press.html"        class="nav-link" style="font-size:28px;font-weight:600;font-family:'Geist',Inter,sans-serif;color:var(--navy)">Press</a></li>
+      <li><a href="waitlist.html" class="btn btn-navy" style="margin-top:12px;">Request invite</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow page-hero-eyebrow">How Aletheia works</p>
+    <h1 class="page-hero-headline">Three rules.<br>That's it.</h1>
+  </div>
+</section>
+
+<!-- =========================================================================
+     RULE 01 — Verify who you are
+========================================================================= -->
+<section class="rule-section" id="rule-01" style="background:var(--white);">
+  <div class="container">
+    <div class="rule-inner">
+      <!-- Text -->
+      <div>
+        <p class="rule-number reveal">01</p>
+        <h2 class="rule-title reveal reveal-delay-1">Verify who you are.</h2>
+        <p class="rule-body reveal reveal-delay-2">
+          Before you match with anyone, you upload a government-issued ID and a selfie. Our verification partner (Persona) checks they match — a process that takes about 60 seconds and happens exactly once.
+        </p>
+        <p class="rule-body reveal reveal-delay-2" style="margin-top:-12px;">
+          What we keep: a verified flag tied to your account. What we don't keep: a copy of your ID. It's processed and immediately discarded. Your photo is hashed, not stored in plaintext.
+        </p>
+        <div class="rule-chips reveal reveal-delay-3">
+          <span class="rule-chip"><i data-lucide="id-card" aria-hidden="true"></i> Government ID</span>
+          <span class="rule-chip"><i data-lucide="scan-face" aria-hidden="true"></i> Selfie match</span>
+          <span class="rule-chip"><i data-lucide="lock" aria-hidden="true"></i> Stored encrypted</span>
+        </div>
+      </div>
+      <!-- Illustration -->
+      <div class="rule-illustration reveal reveal-delay-1">
+        <div class="rule-phone-single">
+          <div class="phone-inner" style="border-radius:33px;">
+            <div class="phone-notch"></div>
+            <!-- ID Upload Screen -->
+            <div style="height:100%;background:var(--frost);display:flex;flex-direction:column;padding:52px 16px 20px;">
+              <div style="font-family:'Geist',Inter,sans-serif;font-size:11px;font-weight:600;letter-spacing:0.05em;color:var(--mist);text-transform:uppercase;margin-bottom:16px;">Step 1 of 3</div>
+              <div style="font-family:'Geist',Inter,sans-serif;font-size:17px;font-weight:600;color:var(--navy);margin-bottom:8px;letter-spacing:-0.01em;">Upload your ID</div>
+              <div style="font-size:10px;color:var(--deep);line-height:1.5;margin-bottom:20px;">We verify it matches your face. Takes 60 seconds.</div>
+              <!-- ID card placeholder -->
+              <div style="flex:1;border-radius:12px;border:1.5px dashed var(--haze);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;background:var(--ice);">
+                <i data-lucide="id-card" style="width:28px;height:28px;color:var(--mist);" aria-hidden="true"></i>
+                <span style="font-size:9px;font-weight:500;color:var(--mist);text-align:center;padding:0 12px;">Tap to upload a photo of your government ID</span>
+              </div>
+              <div style="margin-top:16px;background:var(--ocean);color:var(--white);border-radius:10px;padding:11px;text-align:center;font-size:11px;font-weight:600;box-shadow:0 8px 20px rgba(26,107,181,0.3);">Continue</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================================
+     RULE 02 — Meet ten people
+========================================================================= -->
+<section class="rule-section" id="rule-02" style="background:var(--frost);">
+  <div class="container">
+    <div class="rule-inner flip">
+      <!-- Illustration -->
+      <div class="rule-illustration reveal reveal-delay-1">
+        <div class="rule-phone-single">
+          <div class="phone-inner" style="border-radius:33px;">
+            <div class="phone-notch"></div>
+            <!-- Stack of cards screen -->
+            <div style="height:100%;background:var(--frost);display:flex;flex-direction:column;padding:52px 12px 16px;">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;padding:0 4px;">
+                <span style="font-family:'Geist',Inter,sans-serif;font-size:9px;font-weight:300;letter-spacing:0.28em;color:var(--ocean);text-transform:uppercase;">Aletheia</span>
+                <div style="display:flex;align-items:center;gap:4px;background:rgba(255,255,255,0.7);border:0.5px solid var(--haze);border-radius:999px;padding:3px 8px;font-size:8px;font-weight:600;color:var(--deep);">
+                  <i data-lucide="heart" style="width:7px;height:7px;color:var(--ocean);" aria-hidden="true"></i>
+                  4 left today
+                </div>
+              </div>
+              <!-- Stacked profile cards -->
+              <div style="position:relative;flex:1;">
+                <!-- Back card -->
+                <div style="position:absolute;inset:0;border-radius:16px;overflow:hidden;transform:translateY(12px) scale(0.93);background:linear-gradient(135deg,#85B7EB,#B5D4F4);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.3);font-size:60px;font-weight:300;">J</div>
+                <!-- Mid card -->
+                <div style="position:absolute;inset:0;border-radius:16px;overflow:hidden;transform:translateY(6px) scale(0.96);background:linear-gradient(150deg,#185FA5,#378ADD,#85B7EB);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.25);font-size:60px;font-weight:300;">A</div>
+                <!-- Front card -->
+                <div style="position:absolute;inset:0;border-radius:16px;overflow:hidden;box-shadow:0 8px 20px rgba(12,68,124,0.18);background:linear-gradient(135deg,#0C447C,#378ADD,#85B7EB);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.25);font-size:60px;font-weight:300;">M</div>
+                <!-- Name bar on front card -->
+                <div style="position:absolute;bottom:8px;left:8px;right:8px;background:rgba(255,255,255,0.72);backdrop-filter:blur(20px);border:0.5px solid rgba(255,255,255,0.9);border-radius:12px;padding:8px 10px;display:flex;justify-content:space-between;align-items:center;">
+                  <div>
+                    <div style="font-family:'Geist',Inter,sans-serif;font-size:12px;font-weight:600;color:#0A0A0A;">Mira, 28</div>
+                    <div style="font-size:8px;color:#555;">Brooklyn</div>
+                  </div>
+                  <span style="background:var(--verified);color:#fff;font-size:7px;font-weight:700;padding:2px 6px;border-radius:4px;">✓</span>
+                </div>
+              </div>
+              <!-- Reaction buttons -->
+              <div style="display:flex;gap:8px;justify-content:center;margin-top:12px;">
+                <div style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.8);backdrop-filter:blur(12px);border:0.5px solid rgba(255,255,255,0.9);box-shadow:0 4px 12px rgba(12,68,124,0.1);display:flex;align-items:center;justify-content:center;color:var(--ocean);">
+                  <i data-lucide="x" style="width:13px;height:13px;" aria-hidden="true"></i>
+                </div>
+                <div style="width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,0.8);backdrop-filter:blur(12px);border:0.5px solid rgba(255,255,255,0.9);box-shadow:0 4px 12px rgba(12,68,124,0.1);display:flex;align-items:center;justify-content:center;color:var(--ocean);">
+                  <i data-lucide="heart" style="width:13px;height:13px;" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Text -->
+      <div>
+        <p class="rule-number reveal">02</p>
+        <h2 class="rule-title reveal reveal-delay-1">Meet ten people a day.</h2>
+        <p class="rule-body reveal reveal-delay-2">
+          Every morning you receive up to ten new profiles. Not an endless scroll — exactly ten. When they're gone, they're gone. Come back tomorrow.
+        </p>
+        <p class="rule-body reveal reveal-delay-2" style="margin-top:-12px;">
+          The curation weights mutual friends in your network, shared interests declared at signup, and geography. We don't use a black-box AI model. We don't claim to predict compatibility. We just surface people who are probably worth five minutes of your attention.
+        </p>
+        <div class="rule-chips reveal reveal-delay-3">
+          <span class="rule-chip"><i data-lucide="users" aria-hidden="true"></i> Mutual friends first</span>
+          <span class="rule-chip"><i data-lucide="map-pin" aria-hidden="true"></i> Geography-aware</span>
+          <span class="rule-chip"><i data-lucide="ban" aria-hidden="true"></i> No infinite scroll</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================================
+     RULE 03 — Call, then chat
+========================================================================= -->
+<section class="rule-section" id="rule-03" style="background:var(--white);">
+  <div class="container">
+    <div class="rule-inner">
+      <!-- Text -->
+      <div>
+        <p class="rule-number reveal">03</p>
+        <h2 class="rule-title reveal reveal-delay-1">Call, then chat.</h2>
+        <p class="rule-body reveal reveal-delay-2">
+          When two people match, messaging is locked. To unlock it, you have to schedule and complete a short video call — even just five minutes. After that, the chat opens and stays open.
+        </p>
+        <p class="rule-body reveal reveal-delay-2" style="margin-top:-12px;">
+          Forced? Yes. That's the point. Research consistently shows that video interaction is a much stronger signal of real-world compatibility than text. We're not being paternalistic — we're removing the scaffolding that lets bad actors hide.
+        </p>
+        <div class="rule-chips reveal reveal-delay-3">
+          <span class="rule-chip"><i data-lucide="video" aria-hidden="true"></i> Video-first</span>
+          <span class="rule-chip"><i data-lucide="lock-open" aria-hidden="true"></i> Chat unlocks after</span>
+          <span class="rule-chip"><i data-lucide="shield-check" aria-hidden="true"></i> Real person confirmed</span>
+        </div>
+      </div>
+      <!-- Illustration: Two phones side by side -->
+      <div class="rule-illustration reveal reveal-delay-1">
+        <div class="rule-two-phones">
+          <!-- Match screen -->
+          <div class="rule-phone-single">
+            <div class="phone-inner" style="border-radius:28px;">
+              <div class="phone-notch"></div>
+              <div class="screen-match" style="height:100%;">
+                <div class="match-blur-bg">
+                  <div class="photo-bg photo-grad-0" style="height:100%;font-size:70px;">M</div>
+                </div>
+                <div class="match-dark-overlay"></div>
+                <div class="match-card-modal" style="width:155px;">
+                  <div class="match-photo" style="height:100px;">
+                    <div class="photo-bg photo-grad-1" style="height:100%;font-size:60px;">M</div>
+                    <div class="match-photo-overlay"></div>
+                    <div class="match-heart-circle" style="width:36px;height:36px;">
+                      <i data-lucide="heart" style="width:16px;height:16px;" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="match-card-body" style="padding:10px 12px 12px;">
+                    <div class="match-card-title" style="font-size:12px;">It's a match</div>
+                    <div class="match-schedule-btn" style="margin-top:8px;font-size:8px;padding:6px 10px;border-radius:8px;">Schedule a call</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Arrow -->
+          <div style="display:flex;align-items:center;flex-shrink:0;color:var(--mist);">
+            <i data-lucide="arrow-right" style="width:20px;height:20px;" aria-hidden="true"></i>
+          </div>
+
+          <!-- Call screen -->
+          <div class="rule-phone-single">
+            <div class="phone-inner" style="border-radius:28px;">
+              <div class="phone-notch"></div>
+              <div class="screen-call" style="height:100%;">
+                <div class="call-gradient"></div>
+                <div class="call-large-initial" style="font-size:80px;">M</div>
+                <div class="call-pip" style="width:42px;height:58px;top:40px;right:8px;"></div>
+                <div class="call-timer-pill" style="top:40px;left:8px;font-size:8px;padding:4px 8px;">
+                  <span class="active-dot"></span>
+                  Mira · 02:14
+                </div>
+                <div class="call-hud" style="bottom:20px;padding:8px 6px;">
+                  <div class="hud-btn-sm" style="font-size:6px;">
+                    <div class="hud-icon-circle" style="width:26px;height:26px;"><i data-lucide="mic" style="width:11px;height:11px;" aria-hidden="true"></i></div>
+                    Mute
+                  </div>
+                  <div class="hud-btn-sm" style="font-size:6px;">
+                    <div class="hud-icon-circle" style="width:26px;height:26px;"><i data-lucide="video" style="width:11px;height:11px;" aria-hidden="true"></i></div>
+                    Video
+                  </div>
+                  <div class="hud-btn-sm" style="font-size:6px;">
+                    <div class="hud-icon-circle hud-end-circle" style="width:26px;height:26px;"><i data-lucide="phone-off" style="width:11px;height:11px;" aria-hidden="true"></i></div>
+                    End
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WAITLIST CTA -->
+<section class="section-waitlist-cta">
+  <div class="container-narrow reveal">
+    <p class="waitlist-cta-label">Ready to try it?</p>
+    <form class="waitlist-form" data-waitlist aria-label="Waitlist signup">
+      <div class="waitlist-input-group">
+        <label for="hiw-email" class="sr-only">Email address</label>
+        <input type="email" id="hiw-email" name="email" class="waitlist-email-input" placeholder="your@email.com" required autocomplete="email">
+        <button type="submit" class="waitlist-submit">
+          <span class="btn-text">Get early access</span>
+          <i data-lucide="loader" aria-hidden="true"></i>
+        </button>
+      </div>
+      <div class="waitlist-success" role="status" aria-live="polite">
+        <i data-lucide="check-circle" aria-hidden="true"></i>
+        You're in. We'll be in touch.
+      </div>
+    </form>
+    <p class="waitlist-note">No spam. One email when TestFlight opens in your city.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-wordmark">Aletheia</span>
+        <p>Verification-first dating. ID-verified matches, video calls before messaging, ten thoughtful introductions a day.</p>
+      </div>
+      <nav aria-label="Product links">
+        <p class="footer-col-heading">Product</p>
+        <ul class="footer-links" role="list">
+          <li><a href="how-it-works.html" class="footer-link">How it works</a></li>
+          <li><a href="trust.html"        class="footer-link">Trust &amp; safety</a></li>
+          <li><a href="press.html"        class="footer-link">Press</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Company links">
+        <p class="footer-col-heading">Company</p>
+        <ul class="footer-links" role="list">
+          <li><a href="#" class="footer-link">Manifesto</a></li>
+          <li><a href="#" class="footer-link">Contact</a></li>
+          <li><a href="#" class="footer-link">Careers</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Legal links">
+        <p class="footer-col-heading">Legal</p>
+        <ul class="footer-links" role="list">
+          <li><a href="#" class="footer-link">Privacy</a></li>
+          <li><a href="#" class="footer-link">Terms</a></li>
+          <li><a href="#" class="footer-link">Cookies</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-tagline">ALETHEIA · ΑΛΉΘΕΙΑ · TRUTH · EST. 2026 · BROOKLYN</p>
+      <p class="footer-tagline">© 2026 Aletheia Inc.</p>
+    </div>
+  </div>
+</footer>
+
+<div id="cookie-banner" class="cookie-banner" role="region" aria-label="Cookie consent" hidden>
+  <p class="cookie-text">We use cookies to improve your experience. See our <a href="#">privacy policy</a>.</p>
+  <div class="cookie-actions">
+    <button class="cookie-decline">Decline</button>
+    <button class="cookie-accept">Accept</button>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

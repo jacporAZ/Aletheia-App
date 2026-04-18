@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trust &amp; Safety — Aletheia</title>
+  <meta name="description" content="How Aletheia protects its users: identity verification, friend vouching, and human-reviewed safety reports.">
+  <link rel="canonical" href="https://aletheia.app/trust">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="cursor-halo" aria-hidden="true"></div>
+
+<!-- NAV -->
+<header>
+  <nav class="nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-wordmark" aria-label="Aletheia home">Aletheia</a>
+      <ul class="nav-links" role="list">
+        <li><a href="how-it-works.html" class="nav-link">How it works</a></li>
+        <li><a href="trust.html"        class="nav-link" aria-current="page">Trust &amp; safety</a></li>
+        <li><a href="press.html"        class="nav-link">Press</a></li>
+      </ul>
+      <div class="nav-right">
+        <a href="waitlist.html" class="btn btn-navy" style="padding:10px 20px;font-size:14px;">Request invite</a>
+        <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-mobile-overlay">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+  <div id="nav-mobile-overlay" class="nav-mobile-overlay" role="dialog" aria-label="Navigation menu">
+    <ul role="list" style="list-style:none;display:flex;flex-direction:column;gap:28px;align-items:center;">
+      <li><a href="how-it-works.html" class="nav-link" style="font-size:28px;font-weight:600;font-family:'Geist',Inter,sans-serif;color:var(--navy)">How it works</a></li>
+      <li><a href="trust.html"        class="nav-link" style="font-size:28px;font-weight:600;font-family:'Geist',Inter,sans-serif;color:var(--navy)">Trust &amp; safety</a></li>
+      <li><a href="press.html"        class="nav-link" style="font-size:28px;font-weight:600;font-family:'Geist',Inter,sans-serif;color:var(--navy)">Press</a></li>
+      <li><a href="waitlist.html" class="btn btn-navy" style="margin-top:12px;">Request invite</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow page-hero-eyebrow">Trust &amp; safety</p>
+    <h1 class="page-hero-headline" style="max-width:720px;">The quiet infrastructure<br>of trust.</h1>
+  </div>
+</section>
+
+<!-- =========================================================================
+     MAIN CONTENT — Article + TOC sidebar
+========================================================================= -->
+<main>
+  <div class="container">
+    <div class="trust-page-layout">
+
+      <!-- Sticky TOC (desktop only) -->
+      <aside class="toc" aria-label="Table of contents">
+        <p class="toc-label">On this page</p>
+        <nav>
+          <ul class="toc-links" role="list">
+            <li><a href="#identity" class="toc-link active">Identity</a></li>
+            <li><a href="#vouching"  class="toc-link">Vouching</a></li>
+            <li><a href="#reporting" class="toc-link">Reporting</a></li>
+            <li><a href="#founders"  class="toc-link">From the founders</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Article -->
+      <article class="trust-article">
+
+        <!-- Identity -->
+        <section class="trust-article-section reveal" id="identity">
+          <h2>Identity</h2>
+          <p>
+            Every Aletheia account is tied to a real person. Before you see a single profile, you complete a one-time identity check: upload a government-issued ID (passport, driver's licence, or national ID), then take a live selfie. Our partner <strong>Persona</strong> runs a three-way check — document authenticity, biometric match, and liveness detection.
+          </p>
+          <p>
+            The entire flow takes about 60 seconds. Once it passes, Persona sends us a single verified flag and a one-way hash of your facial geometry. The ID image itself is never stored in our infrastructure. We can confirm you passed without being able to read who you are.
+          </p>
+          <p><strong>What we keep:</strong></p>
+          <ul>
+            <li>A verified-account flag (boolean)</li>
+            <li>A tokenised reference ID from Persona (opaque to us)</li>
+            <li>The hash of your facial geometry (cannot be reversed to a photo)</li>
+          </ul>
+          <p><strong>What we never keep:</strong></p>
+          <ul>
+            <li>A copy of your government ID</li>
+            <li>A plaintext photo of your face</li>
+            <li>Your full legal name or date of birth (unless you voluntarily add them to your profile)</li>
+          </ul>
+          <p>
+            Re-verification is triggered automatically if our fraud model detects an anomaly — for example, if your uploaded profile photos change dramatically over time. In that case, you'll be asked to re-verify in under a minute.
+          </p>
+        </section>
+
+        <!-- Vouching -->
+        <section class="trust-article-section reveal" id="vouching">
+          <h2>Vouching</h2>
+          <p>
+            The "4 mutual friends" chip you see on a profile isn't decorative. It means four people in your existing network have independently connected with that person on Aletheia — and none of them revoked the connection.
+          </p>
+          <p>
+            The vouching system works like this: when you add your phone contacts or connect an existing social account, we find the overlap with other verified users. We don't share your contact list with anyone else, and we never message your contacts on your behalf.
+          </p>
+          <p>
+            You can also actively vouch for someone. If a friend asks you to introduce them to someone you know on Aletheia, you can tap "Vouch for [name]" on their profile. This creates a one-way signal: you're saying this person is who they say they are, and they treated you with respect. You can revoke a vouch at any time, and revoked vouches are hidden but logged for our safety team.
+          </p>
+          <p>
+            We surface vouch count prominently because it's our best proxy for social proof in a world where AI-generated profiles are increasingly convincing. A profile with twelve mutual connections is simply harder to fake than one with none.
+          </p>
+        </section>
+
+        <!-- Reporting -->
+        <section class="trust-article-section reveal" id="reporting">
+          <h2>Reporting</h2>
+          <p>
+            One-tap reporting is available on every profile and in every conversation. No friction, no "are you sure?" confirmation dialogs. When you report, the report goes directly to a human reviewer — not a classifier, not an automated queue.
+          </p>
+          <p>
+            Our SLA for report review is <strong>four hours</strong>. In practice, during business hours, it is under ninety minutes. We publish a quarterly transparency report showing report volumes, categories, and outcomes. The first edition will be published when we exit TestFlight.
+          </p>
+          <p><strong>Report categories:</strong></p>
+          <ul>
+            <li>Impersonation or fake identity</li>
+            <li>Inappropriate or abusive messages</li>
+            <li>Harassment or threatening behaviour</li>
+            <li>Underage user</li>
+            <li>Solicitation or spam</li>
+            <li>Other</li>
+          </ul>
+          <p>
+            Accounts reported across multiple independent users in a 30-day window are automatically suspended pending review, regardless of the outcome of earlier reports. A single egregious report (threatening behaviour, solicitation of a minor) triggers immediate suspension.
+          </p>
+          <p>
+            Banned accounts cannot re-register. Because every account is ID-verified, "ban evasion" requires a different government document — a much higher bar than simply creating a new email address.
+          </p>
+        </section>
+
+        <!-- Founders note -->
+        <section class="trust-founder-note reveal" id="founders">
+          <h2 style="font-family:'Geist',Inter,sans-serif;font-size:20px;font-weight:600;color:var(--navy);margin-bottom:20px;scroll-margin-top:96px;">From the founders</h2>
+          <p>
+            We built Aletheia because we were tired of the dishonesty that dating apps make structurally easy. Not malicious dishonesty — just the small, ambient kind that comes from presenting yourself as a slightly better version. A photo from three years ago. A description of who you aspire to be, not who you are at 8am on a Tuesday.
+          </p>
+          <p>
+            The verification system we've built is the most invasive thing we ask of our users. We know that. We've tried hard to make it worth it: to give you the confidence that the person you're talking to is a real human being who wants to meet people.
+          </p>
+          <p>
+            We will never sell your data. We will never use your data to train a model. We will tell you — clearly, in plain English — what we collect and why. And we will publish a transparency report every quarter, not because regulators ask us to, but because we think you deserve it.
+          </p>
+          <p class="trust-founder-name">— The Aletheia Team, Brooklyn, 2026</p>
+        </section>
+
+      </article>
+    </div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-wordmark">Aletheia</span>
+        <p>Verification-first dating. ID-verified matches, video calls before messaging, ten thoughtful introductions a day.</p>
+      </div>
+      <nav aria-label="Product links">
+        <p class="footer-col-heading">Product</p>
+        <ul class="footer-links" role="list">
+          <li><a href="how-it-works.html" class="footer-link">How it works</a></li>
+          <li><a href="trust.html"        class="footer-link">Trust &amp; safety</a></li>
+          <li><a href="press.html"        class="footer-link">Press</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Company links">
+        <p class="footer-col-heading">Company</p>
+        <ul class="footer-links" role="list">
+          <li><a href="#" class="footer-link">Manifesto</a></li>
+          <li><a href="#" class="footer-link">Contact</a></li>
+          <li><a href="#" class="footer-link">Careers</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Legal links">
+        <p class="footer-col-heading">Legal</p>
+        <ul class="footer-links" role="list">
+          <li><a href="#" class="footer-link">Privacy</a></li>
+          <li><a href="#" class="footer-link">Terms</a></li>
+          <li><a href="#" class="footer-link">Cookies</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-tagline">ALETHEIA · ΑΛΉΘΕΙΑ · TRUTH · EST. 2026 · BROOKLYN</p>
+      <p class="footer-tagline">© 2026 Aletheia Inc.</p>
+    </div>
+  </div>
+</footer>
+
+<div id="cookie-banner" class="cookie-banner" role="region" aria-label="Cookie consent" hidden>
+  <p class="cookie-text">We use cookies to improve your experience. See our <a href="#">privacy policy</a>.</p>
+  <div class="cookie-actions">
+    <button class="cookie-decline">Decline</button>
+    <button class="cookie-accept">Accept</button>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

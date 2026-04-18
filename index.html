@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aletheia — Date the person, not the profile</title>
+  <meta name="description" content="Aletheia is the verification-first dating app. ID-verified matches, a video call before messaging, and ten thoughtful matches a day. No bots. No catfishing.">
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="Aletheia — Date the person, not the profile">
+  <meta property="og:description" content="ID-verified matches. A video call before messaging. Ten thoughtful matches a day.">
+  <meta property="og:image"       content="handoff/assets/logo_navy.png">
+  <meta property="og:url"         content="https://aletheia.app">
+  <meta name="twitter:card"       content="summary_large_image">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Lucide icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- Cursor halo (desktop only) -->
+<div class="cursor-halo" aria-hidden="true"></div>
+
+<!-- =========================================================================
+     NAV
+========================================================================= -->
+<header>
+  <nav class="nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-wordmark" aria-label="Aletheia home">Aletheia</a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="how-it-works.html" class="nav-link">How it works</a></li>
+        <li><a href="trust.html"        class="nav-link">Trust &amp; safety</a></li>
+        <li><a href="press.html"        class="nav-link">Press</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <a href="waitlist.html" class="btn btn-navy" style="padding:10px 20px;font-size:14px;" aria-label="Request an invite to Aletheia">Request invite</a>
+        <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-mobile-overlay">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile overlay -->
+  <div id="nav-mobile-overlay" class="nav-mobile-overlay" role="dialog" aria-label="Navigation menu">
+    <ul role="list" style="list-style:none;display:flex;flex-direction:column;gap:28px;align-items:center;">
+      <li><a href="how-it-works.html" class="nav-link" style="font-size:28px;font-weight:600;font-family:'Geist',Inter,sans-serif;color:var(--navy)">How it works</a></li>
+      <li><a href="trust.html"        class="nav-link" style="font-size:28px;font-weight:600;font-family:'Geist',Inter,sans-serif;color:var(--navy)">Trust &amp; safety</a></li>
+      <li><a href="press.html"        class="nav-link" style="font-size:28px;font-weight:600;font-family:'Geist',Inter,sans-serif;color:var(--navy)">Press</a></li>
+      <li><a href="waitlist.html" class="btn btn-navy" style="margin-top:12px;">Request invite</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- =========================================================================
+     HERO — Variant 1: Fanned phones
+========================================================================= -->
+<section class="hero" id="hero">
+  <div class="hero-ring hero-ring-1" aria-hidden="true"></div>
+  <div class="hero-ring hero-ring-2" aria-hidden="true"></div>
+
+  <div class="hero-inner">
+    <!-- Left column -->
+    <div class="hero-left">
+      <div class="hero-badge">
+        <span class="green-dot" aria-hidden="true"></span>
+        Coming to iOS · TestFlight
+      </div>
+
+      <h1 class="hero-headline">
+        Connect with<br>
+        <em>a person</em>,<br>
+        not a profile.
+      </h1>
+
+      <p class="hero-sub">
+        Every match is ID-verified. You talk on a video call before you message. No bots, no catfishing, no guessing.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="waitlist.html" class="btn btn-primary">
+          <i data-lucide="apple" aria-hidden="true"></i>
+          Become a Founding Member
+        </a>
+        <a href="#" class="btn btn-ghost">Watch the film →</a>
+      </div>
+
+      <div class="hero-stats" aria-label="Key statistics">
+        <div class="stat">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">ID verified</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">10/day</div>
+          <div class="stat-label">Thoughtful matches</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">1 call</div>
+          <div class="stat-label">Before any chat</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right column: fanned phones + floating chips -->
+    <div class="hero-right" aria-hidden="true">
+      <div class="phone-cluster">
+
+        <!-- Floating chips -->
+        <div class="chip-wrap chip-wrap-1" data-parallax="0.04">
+          <div class="chip chip-1">
+            <i data-lucide="shield-check"></i>
+            ID verified
+          </div>
+        </div>
+
+        <div class="chip-wrap chip-wrap-2" data-parallax="-0.05">
+          <div class="chip chip-2">
+            <i data-lucide="video"></i>
+            Video call required
+          </div>
+        </div>
+
+        <div class="chip-wrap chip-wrap-3" data-parallax="0.03">
+          <div class="chip chip-3">
+            <i data-lucide="users"></i>
+            Suggest a Match to a Friend
+          </div>
+        </div>
+
+        <div class="chip-wrap chip-wrap-4" data-parallax="-0.04">
+          <div class="chip chip-4">
+            <i data-lucide="heart"></i>
+            It's a match
+          </div>
+        </div>
+
+        <!-- Back phone: Video Call -->
+        <div class="phone-wrap phone-wrap-back" data-parallax="-0.012">
+          <div class="phone">
+            <div class="phone-inner">
+              <div class="phone-notch"></div>
+              <div class="screen-call">
+                <div class="call-gradient"></div>
+                <img src="images/asian-photo-female.png" alt="" aria-hidden="true" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0.9;"> 
+                <div class="call-pip">
+                  <img src="images/asian-photo.png" alt="" aria-hidden="true" style="width:100%;height:100%;object-fit:cover;display:block;">
+                </div>
+                <div class="call-timer-pill">
+                  <span class="active-dot"></span>
+                  Stephanie · 02:14
+                </div>
+                <div class="call-hud">
+                  <div class="hud-btn-sm">
+                    <div class="hud-icon-circle"><i data-lucide="mic"></i></div>
+                    Mute
+                  </div>
+                  <div class="hud-btn-sm">
+                    <div class="hud-icon-circle"><i data-lucide="video"></i></div>
+                    Video
+                  </div>
+                  <div class="hud-btn-sm">
+
+                  <div class="hud-btn-sm">
+                    <div class="hud-icon-circle hud-end-circle"><i data-lucide="phone-off"></i></div>
+                    End
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Middle phone: Match Moment -->
+        <div class="phone-wrap phone-wrap-mid" data-parallax="0">
+          <div class="phone">
+            <div class="phone-inner">
+              <div class="phone-notch"></div>
+              <div class="screen-match">
+                <div class="match-blur-bg">
+                  <img src="images/asian-photo.png" alt="" aria-hidden="true" style="width:100%;height:100%;object-fit:cover;">
+                </div>
+                <div class="match-dark-overlay"></div>
+                <div class="match-card-modal">
+                  <div class="match-photo">
+                    <img src="images/asian-photo.png" alt="" aria-hidden="true" style="width:100%;height:100%;object-fit:cover;">
+                    <div class="match-photo-overlay"></div>
+                    <div class="match-heart-circle">
+                      <i data-lucide="heart"></i>
+                    </div>
+                  </div>
+                  <div class="match-card-body">
+                    <div class="match-card-title">It's a match</div>
+                    <div class="match-card-desc">John also said yes! Next step: a call to see if there is a connection.</div>
+                    <div class="match-schedule-btn">Schedule a call</div>
+                    <div class="match-keep-browsing">Keep browsing</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Front phone: Discover -->
+        <div class="phone-wrap phone-wrap-front" data-parallax="0.015">
+          <div class="phone">
+            <div class="phone-inner">
+              <div class="phone-notch"></div>
+              <div class="screen-discover">
+                <div class="discover-header">
+                  <span class="discover-wordmark">Aletheia</span>
+                  <div class="discover-counter">
+                    <i data-lucide="heart"></i>
+                    3/10
+                  </div>
+                </div>
+                <div class="discover-card">
+                  <img src="images/o4gRwrEdFmUYeaSBEK8xw1gIDfA4FDCNbB9nVQ~tplv-tiktokx-origin.jpg" alt="Profile photo" style="width:100%;height:100%;object-fit:cover;">
+                  <div class="discover-active-pill">
+                    <span class="active-dot"></span>
+                    Active 2h ago
+                  </div>
+                  <div class="discover-name-bar">
+                    <div>
+                      <div class="discover-name">Deshawn, 24</div>
+                      <div class="discover-city">Tempe</div>
+                    </div>
+                    <span class="discover-verified">✓ Verified</span>
+                  </div>
+                </div>
+                <div class="reaction-rail">
+                  <div class="reaction-btn-sm"><i data-lucide="x"></i></div>
+                  <div class="reaction-btn-sm"><i data-lucide="heart"></i></div>
+                  <div class="reaction-btn-sm"><i data-lucide="video"></i></div>
+                  <div class="reaction-btn-sm"><i data-lucide="user-plus"></i></div>
+                </div>
+                <div class="discover-basics">
+                  <i data-lucide="briefcase"></i>
+                  Investment Banking · JP MORGAN
+                </div>
+                <div class="discover-prompt">
+                  <div class="discover-prompt-label">Favorite Song</div>
+                  <div class="discover-prompt-text">Slow Dancing in a Burning Room - John Mayer</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /.phone-cluster -->
+    </div><!-- /.hero-right -->
+  </div><!-- /.hero-inner -->
+</section>
+
+<!-- =========================================================================
+     THE THESIS
+========================================================================= -->
+<section class="section-thesis" id="thesis">
+  <div class="container-narrow">
+    <p class="eyebrow thesis-eyebrow reveal">Why we exist</p>
+    <h2 class="thesis-headline reveal reveal-delay-1">Dating apps forgot to put the people in.</h2>
+    <p class="thesis-body reveal reveal-delay-2">
+      We keep meeting avatars. Filtered photos, rehearsed prompts, conversations that collapse the moment they leave the app. Aletheia is built on the boring, unsexy idea that dating works better when you know the other person exists — and that they want to meet you.
+    </p>
+  </div>
+</section>
+
+<!-- =========================================================================
+     HOW IT WORKS — TEASER
+========================================================================= -->
+<section class="section-how-teaser" id="how-it-works-teaser">
+  <div class="container">
+    <div class="how-teaser-header">
+      <div>
+        <p class="eyebrow reveal" style="margin-bottom:12px;">How it works</p>
+        <h2 class="section-subhead reveal reveal-delay-1">Three rules. That's it.</h2>
+      </div>
+      <a href="how-it-works.html" class="section-link reveal reveal-delay-2">See the full walkthrough →</a>
+    </div>
+
+    <div class="how-grid">
+      <div class="how-card reveal">
+        <div class="how-number">01</div>
+        <i data-lucide="badge-check" class="how-icon" aria-hidden="true"></i>
+        <h3 class="how-title">Verify who you are.</h3>
+        <p class="how-body">Upload a government ID. Takes 60 seconds. One time, ever.</p>
+      </div>
+      <div class="how-card reveal reveal-delay-1">
+        <div class="how-number">02</div>
+        <i data-lucide="users" class="how-icon" aria-hidden="true"></i>
+        <h3 class="how-title">Meet ten people.</h3>
+        <p class="how-body">Hand-picked, never more than ten a day. No infinite swiping. No algorithmic rabbit holes.</p>
+      </div>
+      <div class="how-card reveal reveal-delay-2">
+        <div class="how-number">03</div>
+        <i data-lucide="video" class="how-icon" aria-hidden="true"></i>
+        <h3 class="how-title">Call, then chat.</h3>
+        <p class="how-body">Messaging unlocks only after you've been on a real video call together.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================================
+     TRUST — TEASER
+========================================================================= -->
+<section class="section-trust-teaser" id="trust-teaser">
+  <div class="container">
+    <div class="trust-teaser-card reveal">
+      <div class="trust-left">
+        <h2>Built for trust,<br>end to end.</h2>
+        <ul class="trust-list">
+          <li class="trust-list-item">
+            <i data-lucide="check-circle" aria-hidden="true"></i>
+            Government ID verification on every account
+          </li>
+          <li class="trust-list-item">
+            <i data-lucide="check-circle" aria-hidden="true"></i>
+            Video call required before any messaging
+          </li>
+          <li class="trust-list-item">
+            <i data-lucide="check-circle" aria-hidden="true"></i>
+            Friend-vouching network surfaces mutual connections
+          </li>
+        </ul>
+        <a href="trust.html" class="section-link">Read our safety principles →</a>
+      </div>
+      <div class="trust-right" aria-hidden="true">
+        <div class="trust-layers">
+          <div class="trust-layer glass">
+            <i data-lucide="id-card" aria-hidden="true"></i>
+            <span>ID Verification</span>
+          </div>
+          <div class="trust-layer glass" style="margin-left:20px;">
+            <i data-lucide="users" aria-hidden="true"></i>
+            <span>Friend Vouches</span>
+          </div>
+          <div class="trust-layer glass" style="margin-left:40px;">
+            <i data-lucide="video" aria-hidden="true"></i>
+            <span>Real-time call</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================================
+     WAITLIST CTA
+========================================================================= -->
+<section class="section-waitlist-cta" id="waitlist">
+  <div class="container-narrow reveal">
+    <p class="waitlist-cta-label">Be first in line.</p>
+    <form class="waitlist-form" data-waitlist aria-label="Waitlist signup">
+      <div class="waitlist-input-group">
+        <label for="hero-email" class="sr-only">Email address</label>
+        <input
+          type="email"
+          id="hero-email"
+          name="email"
+          class="waitlist-email-input"
+          placeholder="your@email.com"
+          required
+          autocomplete="email"
+        >
+        <button type="submit" class="waitlist-submit">
+          <span class="btn-text">Get early access</span>
+          <i data-lucide="loader" aria-hidden="true"></i>
+        </button>
+      </div>
+      <div class="waitlist-success" role="status" aria-live="polite">
+        <i data-lucide="check-circle" aria-hidden="true"></i>
+        You're in. We'll be in touch.
+      </div>
+    </form>
+    <p class="waitlist-note">No spam. No "newsletters." One email when TestFlight opens in your city.</p>
+  </div>
+</section>
+
+<!-- =========================================================================
+     FOOTER
+========================================================================= -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="footer-wordmark">Aletheia</span>
+        <p>Verification-first dating. ID-verified matches, video calls before messaging, ten thoughtful introductions a day.</p>
+      </div>
+
+      <nav aria-label="Product links">
+        <p class="footer-col-heading">Product</p>
+        <ul class="footer-links" role="list">
+          <li><a href="how-it-works.html" class="footer-link">How it works</a></li>
+          <li><a href="trust.html"        class="footer-link">Trust &amp; safety</a></li>
+          <li><a href="press.html"        class="footer-link">Press</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-label="Company links">
+        <p class="footer-col-heading">Company</p>
+        <ul class="footer-links" role="list">
+          <li><a href="#"             class="footer-link">Manifesto</a></li>
+          <li><a href="#"             class="footer-link">Contact</a></li>
+          <li><a href="#"             class="footer-link">Careers</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-label="Legal links">
+        <p class="footer-col-heading">Legal</p>
+        <ul class="footer-links" role="list">
+          <li><a href="#" class="footer-link">Privacy</a></li>
+          <li><a href="#" class="footer-link">Terms</a></li>
+          <li><a href="#" class="footer-link">Cookies</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-tagline">ALETHEIA · ΑΛΉΘΕΙΑ · TRUTH · EST. 2026 · TEMPE</p>
+      <p class="footer-tagline">© 2026 Aletheia</p>
+    </div>
+  </div>
+</footer>
+
+<!-- =========================================================================
+     COOKIE BANNER
+========================================================================= -->
+<div id="cookie-banner" class="cookie-banner" role="region" aria-label="Cookie consent" hidden>
+  <p class="cookie-text">
+    We use cookies to improve your experience. See our <a href="#">privacy policy</a>.
+  </p>
+  <div class="cookie-actions">
+    <button class="cookie-decline">Decline</button>
+    <button class="cookie-accept">Accept</button>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join the waitlist — Aletheia</title>
+  <meta name="description" content="Be first when Aletheia opens in your city. No spam — one email when TestFlight is ready for you.">
+  <link rel="canonical" href="https://aletheia.app/waitlist">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div class="cursor-halo" aria-hidden="true"></div>
+
+<!-- Minimal nav -->
+<header>
+  <nav class="nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-wordmark" aria-label="Aletheia home">Aletheia</a>
+      <div class="nav-right">
+        <a href="index.html" class="btn btn-ghost" style="padding:10px 20px;font-size:14px;">← Back to home</a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- =========================================================================
+     WAITLIST PAGE — single centered screen
+========================================================================= -->
+<main>
+  <div class="waitlist-page">
+    <div class="waitlist-page-inner">
+
+      <!-- Logo -->
+      <a href="index.html" aria-label="Aletheia home">
+        <img
+          src="handoff/assets/logo_navy.png"
+          alt="Aletheia"
+          class="waitlist-page-logo"
+        >
+      </a>
+
+      <!-- Headline -->
+      <h1 class="waitlist-page-headline reveal">
+        Be first when we<br>open your city.
+      </h1>
+
+      <!-- Form -->
+      <form
+        class="waitlist-form"
+        data-waitlist
+        style="text-align:left;"
+        aria-label="Waitlist signup"
+      >
+        <!-- Email -->
+        <div class="waitlist-input-group">
+          <label for="waitlist-email" class="sr-only">Email address</label>
+          <input
+            type="email"
+            id="waitlist-email"
+            name="email"
+            class="waitlist-email-input"
+            placeholder="your@email.com"
+            required
+            autocomplete="email"
+          >
+          <button type="submit" class="waitlist-submit">
+            <span class="btn-text">Join waitlist</span>
+            <i data-lucide="loader" aria-hidden="true"></i>
+          </button>
+        </div>
+
+        <!-- City (optional) -->
+        <div class="waitlist-city-field">
+          <label for="waitlist-city" style="display:block;font-size:13px;font-weight:500;color:var(--mist);margin-bottom:6px;">
+            Where should we launch next? <span style="opacity:0.6;">(optional)</span>
+          </label>
+          <input
+            type="text"
+            id="waitlist-city"
+            name="city"
+            class="waitlist-city-input"
+            placeholder="New York, London, Sydney..."
+            autocomplete="address-level2"
+          >
+        </div>
+
+        <!-- Success state -->
+        <div class="waitlist-success" role="status" aria-live="polite" style="justify-content:flex-start;padding:20px 0 0;">
+          <i data-lucide="check-circle" aria-hidden="true"></i>
+          You're in. We'll be in touch.
+        </div>
+      </form>
+
+      <!-- Trust line -->
+      <p class="waitlist-trust-line reveal">
+        No spam. No "newsletters." One email when TestFlight opens in your city.
+      </p>
+
+      <!-- Already have access? -->
+      <p class="waitlist-app-link reveal">
+        Already have access? <a href="#">Open in App Store →</a>
+      </p>
+
+      <!-- Stats row -->
+      <div style="margin-top:48px;padding-top:48px;border-top:0.5px solid var(--haze);display:flex;justify-content:center;gap:48px;" class="reveal">
+        <div style="text-align:center;">
+          <div style="font-family:'Geist',Inter,sans-serif;font-size:22px;font-weight:600;color:var(--navy);">100%</div>
+          <div style="font-size:13px;color:var(--mist);margin-top:3px;">ID verified</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="font-family:'Geist',Inter,sans-serif;font-size:22px;font-weight:600;color:var(--navy);">10/day</div>
+          <div style="font-size:13px;color:var(--mist);margin-top:3px;">Curated matches</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="font-family:'Geist',Inter,sans-serif;font-size:22px;font-weight:600;color:var(--navy);">0 bots</div>
+          <div style="font-size:13px;color:var(--mist);margin-top:3px;">Guaranteed</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
+
+<!-- Minimal footer -->
+<footer style="background:var(--white);border-top:0.5px solid var(--haze);padding:24px 0;">
+  <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;">
+    <p style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--mist);letter-spacing:0.08em;">ALETHEIA · ΑΛΉΘΕΙΑ · TRUTH · EST. 2026</p>
+    <div style="display:flex;gap:24px;">
+      <a href="#" style="font-size:13px;color:var(--mist);">Privacy</a>
+      <a href="#" style="font-size:13px;color:var(--mist);">Terms</a>
+      <a href="index.html" style="font-size:13px;color:var(--ocean);font-weight:600;">← Back to home</a>
+    </div>
+  </div>
+</footer>
+
+<div id="cookie-banner" class="cookie-banner" role="region" aria-label="Cookie consent" hidden>
+  <p class="cookie-text">We use cookies to improve your experience. See our <a href="#">privacy policy</a>.</p>
+  <div class="cookie-actions">
+    <button class="cookie-decline">Decline</button>
+    <button class="cookie-accept">Accept</button>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
