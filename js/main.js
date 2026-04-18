@@ -143,8 +143,8 @@
 
       chipWraps.forEach(el => {
         const factor = parseFloat(el.dataset.parallax) || 0;
-        const tx = currentX * factor * 120;
-        const ty = currentY * factor * 40;
+        const tx = currentX * factor * 420;
+        const ty = currentY * factor * 120;
         el.style.transform = `translate(${tx}px, ${ty}px)`;
       });
 
@@ -188,16 +188,22 @@
     submitBtn.disabled = true;
 
     try {
-      // Stub endpoint — logs to console, returns success
-      console.log('[Aletheia Waitlist]', { email, city });
+      const res = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, city }),
+      });
 
-      // Simulate network
-      await new Promise(resolve => setTimeout(resolve, 600));
+      if (!res.ok) {
+        throw new Error(`Server error ${res.status}`);
+      }
 
       // Success state
       const inputGroup = form.querySelector('.waitlist-input-group');
+      const cityField  = form.querySelector('.waitlist-city-field');
       if (inputGroup) inputGroup.style.display = 'none';
-      if (successEl) successEl.classList.add('visible');
+      if (cityField)  cityField.style.display  = 'none';
+      if (successEl)  successEl.classList.add('visible');
 
       // Re-init lucide icons inside success
       if (window.lucide) lucide.createIcons();
